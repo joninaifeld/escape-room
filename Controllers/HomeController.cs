@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using escape_room.Models;
+using Newtonsoft.Json;
 
 namespace escape_room.Controllers;
 
