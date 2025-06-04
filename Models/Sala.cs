@@ -12,4 +12,7 @@ public class Sala{
         this.respuesta = respuesta;
         this.titulo = titulo;
     }
+    public bool comprobarRespuesta(string input){
+        return (respuesta == input);
+    }
 }
