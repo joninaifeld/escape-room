@@ -22,49 +22,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Almacenamiento()
-    {
-        
-        return View();
-    }
-
-    public IActionResult Mantenimiento()
-    {
-        
-        return View();
-    }
-
-    public IActionResult Termica()
-    {
-        
-        return View();
-    }
-
-    public IActionResult Heladeras()
-    {
-        
-        return View();
-    }
-
-    public IActionResult Verduleria()
-    {
-        
-        return View();
-    }
-
-    public IActionResult Registradora()
-    {
-        
-        return View();
-    }
-
-    public IActionResult CajaAbierta()
-    {
-        
-        return View();
-    }
-
-    public IActionResult Escape()
+    public IActionResult IrASala()
     {
         
         return View();

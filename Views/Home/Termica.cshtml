@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Térmica";
+}
+
+<h1>@ViewBag.titulo</h1>
+<p>@ViewBag.descripcion</p>
+
+<form action='@Url.Action("Termica", "Home")' method="POST">
+    <button type="submit" name="letra" value="A"></button>
+    <button type="submit" name="letra" value="V"></button>
+    <button type="submit" name="letra" value="C"></button>
+    <button type="submit" name="letra" value="S"></button>
+    <button type="submit" name="letra" value="L"></button>
+    <button type="submit" name="letra" value="E"></button>
+</form>

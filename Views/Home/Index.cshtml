@@ -2,7 +2,10 @@
     ViewData["Title"] = "Index";
 }
 
-<div>
-    <h1>Index</h1>
-    <p>Bienvenidos al sitio web de NombreProyecto</p>
-</div>
+<h1>@ViewBag.titulo</h1>
+<p>@ViewBag.descripcion</p>
+
+<form>
+    <input type="text" placeholder="Ingresá tu nombre" required>
+    <button type="submit">Enviar</button>
+</form>
