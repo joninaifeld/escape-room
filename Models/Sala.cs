@@ -1,16 +1,21 @@
 using Newtonsoft.Json;
 
 public class Sala{
-    public bool completada;
-    public string fotoBg;
-    public string respuesta;
-    public string titulo;
+    public string fotoBg { get; private set; }
+    public string respuesta { get; private set; }
+    public string titulo { get; private set; }
+    public string frase { get; private set; }
 
-    public Sala(string fotoBg, string respuesta, string titulo){
-        this.completada = false;
+    public Sala(string fotoBg, string titulo, string frase, string respuesta){
         this.fotoBg = fotoBg;
         this.respuesta = respuesta;
         this.titulo = titulo;
+        this.frase = frase;
+    }
+    public Sala(string fotoBg, string titulo, string frase){
+        this.fotoBg = fotoBg;
+        this.titulo = titulo;
+        this.frase = frase;
     }
     public bool comprobarRespuesta(string input){
         return (respuesta == input);
