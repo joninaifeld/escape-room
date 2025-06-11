@@ -16,6 +16,7 @@ public class Sala{
         this.fotoBg = fotoBg;
         this.titulo = titulo;
         this.frase = frase;
+        this.respuesta = "";
     }
     public bool comprobarRespuesta(string input){
         return (respuesta == input);
