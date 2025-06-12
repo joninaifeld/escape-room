@@ -20,7 +20,8 @@ public class HomeController : Controller
     {
         Coto coto = new Coto();
         HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
-
+        ViewBag.titulo = coto.salas[coto.salasCompletadas].titulo;
+        ViewBag.descripcion = coto.salas[coto.salasCompletadas].frase;
         return View();
     }
 
@@ -34,7 +35,16 @@ public class HomeController : Controller
         else{
             ViewBag.mensaje = "Respuesta incorrecta";
         }
+        ViewBag.titulo = coto.salas[coto.salasCompletadas].titulo;
+        ViewBag.descripcion = coto.salas[coto.salasCompletadas].frase;
+
         HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
         return View(coto.salas[coto.salasCompletadas].nombre);
+    }
+
+    public IActionResult RevisarLetras(char letra)
+    {
+        
+        return View("Termica");
     }
 }

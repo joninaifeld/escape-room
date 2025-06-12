@@ -6,12 +6,22 @@
 <p>@ViewBag.descripcion</p>
 
 <form method="post" Action='@Url.Action("RevisarLetras", "Home")'>
-    <button type="submit" name="letra" value="A"></button>
-    <button type="submit" name="letra" value="V"></button>
-    <button type="submit" name="letra" value="C"></button>
-    <button type="submit" name="letra" value="S"></button>
-    <button type="submit" name="letra" value="L"></button>
-    <button type="submit" name="letra" value="E"></button>
+    <button name="letra" value="A"></button>
+    <button name="letra" value="V"></button>
+    <button name="letra" value="C"></button>
+    <button name="letra" value="S"></button>
+    <button name="letra" value="L"></button>
+    <button name="letra" value="E"></button>
+    <button type="submit">Arriesgar</button>
 </form>
 
+<ul>
+    <li>1 = a</li>
+    <li>2 = v</li>
+    <li>3 = c</li>
+    <li>4 = s</li>
+    <li>5 = l</li>
+    <li>6 = e</li>
+    <li>No repitas!</li>
+</ul>
 <h4>@ViewBag.mensaje</h4>
