@@ -12,7 +12,8 @@ html {
 body {
   margin: 10px;
   padding: 10px;
-  background-image: url('images/index.webp');
+  background-image: url('/images/index.webp');
+  background-repeat: no-repeat;
 }
 
 

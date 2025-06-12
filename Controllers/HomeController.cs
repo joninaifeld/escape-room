@@ -18,13 +18,23 @@ public class HomeController : Controller
 // cada vez q se gana la sala se pide y se actualiza la variable de salas completadas
     public IActionResult Index()
     {
-        
+        Coto coto = new Coto();
+        HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
+
         return View();
     }
 
-    public IActionResult IrASala()
+    public IActionResult IrASala(string ans)
     {
-        
-        return View();
+        Coto coto = Objeto.StringToObject<Coto>(HttpContext.Session.GetString("coto"));
+        if(coto.salas[coto.salasCompletadas].comprobarRespuesta(ans)){
+            coto.salasCompletadas++;
+            ViewBag.mensaje = "";
+        }
+        else{
+            ViewBag.mensaje = "Respuesta incorrecta";
+        }
+        HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
+        return View(coto.salas[coto.salasCompletadas].nombre);
     }
 }

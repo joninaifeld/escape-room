@@ -1,11 +1,13 @@
 @{
-    ViewData["Title"] = "Almacenamiento";
+    ViewData["Title"] = "Verduleria";
 }
 
 <h1>@ViewBag.titulo</h1>
 <p>@ViewBag.descripcion</p>
 
-<form>
-    <input type="text" required name="input" placeholder="Ingresá el código">
-    <button type="submit"></button>
+<form method="post" Action='@Url.Action("IrASala", "Home")'>
+    <input autocomplete="off" autofocus type="text" placeholder="Ingresá el número" required name="ans">
+    <button type="submit">Enviar</button>
 </form>
+
+<h4>@ViewBag.mensaje</h4>
