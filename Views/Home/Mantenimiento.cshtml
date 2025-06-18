@@ -2,8 +2,9 @@
     ViewData["Title"] = "Mantenimiento";
 }
 
-<h1>@ViewBag.titulo</h1>
-<p>@ViewBag.descripcion</p>
+<main role="main" class="mantenimiento">
+    <h1>@ViewBag.titulo</h1>
+    <p>@ViewBag.descripcion</p>
 
-
-<a href = '@Url.Action("IrASala", "Home")'><button></button></a>
+    <a href = '@Url.Action("IrASala", "Home")'><button></button></a>
+</main>
