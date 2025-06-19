@@ -2,12 +2,13 @@
     ViewData["Title"] = "Inicio";
 }
 
-<main role="main" class="index">
+<img src= "/images/index.webp">
+<section class="index">
     <h1>@ViewBag.titulo</h1>
     <p>@ViewBag.descripcion</p>
 
     <form method="post" Action='@Url.Action("IrASala", "Home")'>
-        <input autocomplete="off" autofocus type="text" placeholder="Ingresá tu nombre" required name="ans">
-        <button type="submit">Enviar</button>
+        <!-- <input autocomplete="off" autofocus type="text" placeholder="Ingresá tu nombre" required name="ans"> -->
+        <button type="submit" name="ans" value="next">Empezar</button>
     </form>
-</main>
+</section>

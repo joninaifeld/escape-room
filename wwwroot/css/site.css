@@ -15,12 +15,17 @@ html {
   }
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 h1, p, h4{
   color: var(--color3);
   font-weight: bolder;
   margin-block: 0.1%;
-  margin-left: 0.5%;
+  /* margin-left: 0.5%; */
 }
 p{
   font-size: 1.6rem;
@@ -51,10 +56,11 @@ button[type="submit"] {
   padding: 0.2%;
   border: 3px solid var(--color3);
   cursor:pointer;
+  /* margin-left: 0.5%; */
 }
 button[type="submit"]:hover{
   background-color: var(--color2);
-  border: var(--color2);
+  border: 3px solid var(--color2);
 }
 input[type="text"] {
   border: 3px solid var(--color4);
@@ -62,24 +68,55 @@ input[type="text"] {
   padding: 0.4%;
   font-size: 1rem;
   outline: none;
-  margin-left: 0.5%;
+  /* margin-left: 0.5%; */
 }
 
-/* fotos fondos */
-
-body {
-  /* background-image: url('/images/index.webp'); */
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.almacenamiento{
+/* .almacenamiento {
   background-image: url('/images/almacenamiento.png');
   height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0;
   padding: 0;
+} */
+
+img{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+section{
+  position: relative;
+  margin-left: 0.5%;
+}
+
+section a{
+  border: 1px solid black;
+  /* height: min-content;
+  width: min-content; */
+  /* height: 50px;
+  width: 50px; */
+}
+
+.mantenimiento a div{
+  border: 1px solid black;
+  /* height: 50px;
+  width: 50px; */
+}
+
+.index{
+  text-align: center;
+  height: 50%;
+  padding-top: 15%;
+  padding-bottom: 25%;
+  margin-left: 0;
+}
+.index button{
+  width: 12%;
+  /* padding: 0.5%; */
+  font-size: 1.7rem;
+  height: auto;
 }

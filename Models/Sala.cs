@@ -15,13 +15,6 @@ public class Sala{
         this.nombre = nombre;
     }
      
-    public Sala(string fotoBg, string titulo, string frase, string nombre){
-        this.fotoBg = fotoBg;
-        this.titulo = titulo;
-        this.frase = frase;
-        this.respuesta = "";
-        this.nombre = nombre;
-    }
     public Sala() {}
 
     public bool comprobarRespuesta(string input){
