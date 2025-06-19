@@ -41,10 +41,43 @@ public class HomeController : Controller
         HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
         return View(coto.salas[coto.salasCompletadas].nombre);
     }
-
-    public IActionResult RevisarLetras(char letra)
-    {
-        
+    public IActionResult VolverATermica(){
+        Coto coto = Objeto.StringToObject<Coto>(HttpContext.Session.GetString("coto"));
+        ViewBag.titulo = coto.salas[coto.salasCompletadas].titulo;
+        ViewBag.descripcion = coto.salas[coto.salasCompletadas].frase;
         return View("Termica");
     }
+    // public void RevisarLetras(char letra)
+    // {
+    //     Coto coto = Objeto.StringToObject<Coto>(HttpContext.Session.GetString("coto"));
+    //     coto.termicaArriesgo += letra;
+    //     HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
+    //     if(coto.termicaArriesgo.Length == 6) {
+    //         IrASala(coto.termicaArriesgo);
+    //         coto.termicaArriesgo = "";
+    //         HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
+    //     }
+    //     else VolverATermica();
+    // }
+
+    [HttpPost]
+public IActionResult RevisarLetras(string letra)
+{
+    Coto coto = Objeto.StringToObject<Coto>(HttpContext.Session.GetString("coto"));
+    coto.termicaArriesgo += letra[0];
+    HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
+
+    if (coto.termicaArriesgo.Length == 6)
+    {
+        string palabra = coto.termicaArriesgo;
+        coto.termicaArriesgo = "";
+        HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
+        return RedirectToAction("IrASala", new { ans = palabra });
+    }
+    else
+    {
+        return RedirectToAction("VolverATermica");
+    }
+}
+
 }

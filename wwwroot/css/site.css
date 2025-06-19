@@ -90,21 +90,28 @@ img{
 
 section{
   position: relative;
-  margin-left: 0.5%;
+  padding-left: 0.5%;
+  padding-top: 0.25%;
 }
 
 section a{
-  border: 1px solid black;
-  /* height: min-content;
-  width: min-content; */
-  /* height: 50px;
-  width: 50px; */
+  /* border: 1px solid black; */
+  display: inline-block;
+  position: relative;
+  cursor: default;
 }
-
-.mantenimiento a div{
-  border: 1px solid black;
-  /* height: 50px;
-  width: 50px; */
+.mantenimiento a{
+  height: 80px;
+  width: 75px;
+  top: 365px;
+  left: 860px;
+}
+.heladeras a{
+  /* border: 5px solid black; */
+  height: 390px;
+  width: 570px;
+  top: 290px;
+  left: 615px;
 }
 
 .index{
