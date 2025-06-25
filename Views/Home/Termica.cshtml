@@ -7,15 +7,16 @@
     <h1>@ViewBag.titulo</h1>
     <p>@ViewBag.descripcion</p>
 
-    <form method="post" Action='@Url.Action("RevisarLetras", "Home")'>
-        <button name="letra" value="a"></button>
-        <button name="letra" value="v"></button>
-        <button name="letra" value="c"></button>
-        <button name="letra" value="s"></button>
-        <button name="letra" value="l"></button>
-        <button name="letra" value="e"></button>
-    </form>
-
+    <div>
+        <form method="post" Action='@Url.Action("RevisarLetras", "Home")'>
+            <button name="letra" value="a"></button>
+            <button name="letra" value="v"></button>
+            <button name="letra" value="c"></button>
+            <button name="letra" value="s"></button>
+            <button name="letra" value="l"></button>
+            <button name="letra" value="e"></button>
+        </form>
+    </div>
     <ul>
         <li>1 = a</li>
         <li>2 = v</li>

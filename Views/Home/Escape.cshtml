@@ -6,5 +6,7 @@
     <h1>@ViewBag.titulo</h1>
     <p>@ViewBag.descripcion</p>
 
-    <a href = '@Url.Action("Index", "Home")'>Volver a jugar</a>
+    <form method="post" Action='@Url.Action("Index", "Home")'>
+        <button type="submit" name="ans" value="next">Volver a jugar</button>
+    </form>
 </section>

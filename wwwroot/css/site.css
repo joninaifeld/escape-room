@@ -122,8 +122,72 @@ section a{
   margin-left: 0;
 }
 .index button{
-  width: 12%;
   /* padding: 0.5%; */
+  width: 12%;
   font-size: 1.7rem;
   height: auto;
+}
+
+.verduleria a{
+  height: 65px;
+  width: 150px;
+  top: 280px;
+  left: 5px;
+}
+
+.llave a{
+  /* border: 5px solid whitesmoke; */
+  height: 45px;
+  width: 50px;
+  top: 665px;
+  left: 405px;
+}
+
+.cajaAbierta a{
+  /* border: 5px solid whitesmoke; */
+  height: 255px;
+  width: 220px;
+  top: 135px;
+  left: 755px;
+}
+
+.escape button[type="submit"] {
+  background-color: var(--color1);
+  color: var(--color3);
+  font-weight: bolder;
+  border-radius: 10px;
+  width: 8%;
+  height: 40px;
+  font-size: 1.1rem;
+  padding: 0.2%;
+  border: 3px solid var(--color3);
+  cursor:pointer;
+  /* margin-left: 0.5%; */
+}
+.escape button[type="submit"]:hover{
+  background-color: var(--color2);
+  border: 3px solid var(--color2);
+}
+
+.termica div button{
+  /* border: 5px solid white; */
+  background: none;
+  border: none;
+  height: 35px;
+  width: 40px;
+  margin-left: 30%;
+  margin-bottom: 18.5%;
+}
+.termica div{
+  width: 250px;
+  position: fixed;
+  top: 240px;
+  left: 647px;
+}
+
+.termica ul{
+  position: fixed;
+  top: 305px;
+  left: 1147px;
+  font-size: x-large;
 }
