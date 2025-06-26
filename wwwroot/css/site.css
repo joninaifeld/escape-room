@@ -109,9 +109,9 @@ section a{
 .heladeras a{
   /* border: 5px solid black; */
   height: 390px;
-  width: 570px;
+  width: 850px;
   top: 290px;
-  left: 615px;
+  left: 850px;
 }
 
 .index{
@@ -138,17 +138,16 @@ section a{
 .llave a{
   /* border: 5px solid whitesmoke; */
   height: 45px;
-  width: 50px;
+  width: 55px;
   top: 665px;
-  left: 405px;
+  left: 580px;
 }
 
 .cajaAbierta a{
-  /* border: 5px solid whitesmoke; */
   height: 255px;
-  width: 220px;
+  width: 300px;
   top: 135px;
-  left: 755px;
+  left: 1068px;
 }
 
 .escape button[type="submit"] {
@@ -173,16 +172,16 @@ section a{
   /* border: 5px solid white; */
   background: none;
   border: none;
-  height: 35px;
-  width: 40px;
-  margin-left: 30%;
-  margin-bottom: 18.5%;
+  height: 50px;
+  width: 100px;
+  margin-left: 15%;
+  margin-bottom: 10%;
 }
 .termica div{
-  width: 250px;
+  width: 300px;
   position: fixed;
-  top: 240px;
-  left: 647px;
+  top: 232px;
+  left: 630px;
 }
 
 .termica ul{
@@ -190,4 +189,16 @@ section a{
   top: 305px;
   left: 1147px;
   font-size: x-large;
+}
+
+.termica h5{
+  position: fixed;
+  top: 550px;
+  left: 775px;
+  font-size: x-large;
+}
+.termica h4{
+  position: fixed;
+  top: 650px;
+  left: 665px;
 }

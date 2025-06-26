@@ -14,8 +14,6 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-// cuando empieza el juego, guardar en session el COTO inicializado, y cada vez q se emtre a una sala pedirlo del session para tener la info de la sala
-// cada vez q se gana la sala se pide y se actualiza la variable de salas completadas
     public IActionResult Index()
     {
         Coto coto = new Coto();
@@ -41,43 +39,30 @@ public class HomeController : Controller
         HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
         return View(coto.salas[coto.salasCompletadas].nombre);
     }
-    public IActionResult VolverATermica(){
+    public IActionResult VolverATermica(int cantBotonesTocados){
         Coto coto = Objeto.StringToObject<Coto>(HttpContext.Session.GetString("coto"));
         ViewBag.titulo = coto.salas[coto.salasCompletadas].titulo;
         ViewBag.descripcion = coto.salas[coto.salasCompletadas].frase;
+        ViewBag.cantBotonesTocados = cantBotonesTocados;
         return View("Termica");
     }
-    // public void RevisarLetras(char letra)
-    // {
-    //     Coto coto = Objeto.StringToObject<Coto>(HttpContext.Session.GetString("coto"));
-    //     coto.termicaArriesgo += letra;
-    //     HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
-    //     if(coto.termicaArriesgo.Length == 6) {
-    //         IrASala(coto.termicaArriesgo);
-    //         coto.termicaArriesgo = "";
-    //         HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
-    //     }
-    //     else VolverATermica();
-    // }
 
-    [HttpPost]
-public IActionResult RevisarLetras(string letra)
-{
-    Coto coto = Objeto.StringToObject<Coto>(HttpContext.Session.GetString("coto"));
-    coto.termicaArriesgo += letra[0];
-    HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
-
-    if (coto.termicaArriesgo.Length == 6)
+    public IActionResult RevisarLetras(string letra)
     {
-        string palabra = coto.termicaArriesgo;
-        coto.termicaArriesgo = "";
+        Coto coto = Objeto.StringToObject<Coto>(HttpContext.Session.GetString("coto"));
+        coto.termicaArriesgo += letra[0];
         HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
-        return RedirectToAction("IrASala", new { ans = palabra });
-    }
-    else
-    {
-        return RedirectToAction("VolverATermica");
-    }
-}
 
+        if (coto.termicaArriesgo.Length == 6)
+        {
+            string palabra = coto.termicaArriesgo;
+            coto.termicaArriesgo = "";
+            HttpContext.Session.SetString("coto", Objeto.ObjectToString<Coto>(coto));
+            return RedirectToAction("IrASala", new { ans = palabra });
+        }
+        else
+        {
+            return RedirectToAction("VolverATermica", new { cantBotonesTocados = coto.termicaArriesgo.Length });
+        }
+    }
 }

@@ -26,5 +26,13 @@
         <li>6 = e</li>
         <li>No repitas!</li>
     </ul>
+    @if(ViewBag.cantBotonesTocados > 0)
+    {
+        <h5>@ViewBag.cantBotonesTocados / 6</h5>
+    }
+    else
+    {
+        <h5>0 / 6</h5>
+    }
     <h4>@ViewBag.mensaje</h4>
 </section>
