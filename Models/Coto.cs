@@ -10,7 +10,7 @@ public class Coto{
         this.termicaArriesgo = "";
         this.salas = new List<Sala>{
             new Sala("index.webp", "Estás en un Coto!!1!!!1!", "Parece que la idea de quedarse 24hs en el Coto no salió del todo bien", "Index", "next"),
-            new Sala("almacenamiento.png", "Sala de Almacenamiento", "Mientras más te acerques, menos verás", "Almacenamiento", "35"),
+            new Sala("almacenamiento.png", "Sala de Almacenamiento", "No te compliques", "Almacenamiento", "35"),
             new Sala("mantenimiento.png", "Sala de Mantenimiento", "Si funciona, no lo toques", "Mantenimiento", "next"),
             new Sala("termica.png", "Caja de Térmica", "laFotoDeJaz.jpg", "Termica", "claves"),
             new Sala("heladeras.jpg", "Área de Heladeras", "Mantené la mente fría", "Heladeras","next"),
