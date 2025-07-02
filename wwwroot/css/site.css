@@ -20,6 +20,8 @@ body {
   margin: 0;
   padding: 0;
   user-select: none;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1, p, h4{
@@ -96,24 +98,25 @@ section{
 }
 
 section a{
-  /* border: 1px solid black; */
+  /* border: 1px solid red; */
   display: inline-block;
   position: relative;
   cursor: default;
 }
-.mantenimiento a{
-  height: 80px;
-  width: 75px;
-  top: 365px;
-  left: 860px;
+.mantenimiento a {
+  height: 9vh;
+  width: 3.91%;
+  top: 38.5vh;
+  left: 44.79%;
 }
-.heladeras a{
-  /* border: 5px solid black; */
-  height: 390px;
-  width: 850px;
-  top: 290px;
-  left: 850px;
+
+.heladeras a {
+  height: 44vh;
+  width: 44.27%;
+  top: 26.85vh;
+  left: 44.27%;
 }
+
 
 .index{
   text-align: center;
@@ -129,27 +132,46 @@ section a{
   height: auto;
 }
 
-.verduleria a{
+/* .verduleria a{
   height: 65px;
   width: 150px;
   top: 280px;
   left: 5px;
+} */
+.verduleria a {
+  height: 12vh;
+  width: 8%;
+  top: 25.93vh;
 }
 
-.llave a{
-  /* border: 5px solid whitesmoke; */
+
+/* .llave a{
   height: 45px;
   width: 55px;
   top: 665px;
   left: 580px;
+} */
+.llave a {
+  height: 5vh;
+  width: 2.8%;
+  top: 70vh;
+  left: 30.2%;
 }
 
-.cajaAbierta a{
+
+/* .cajaAbierta a{
   height: 255px;
   width: 300px;
   top: 135px;
   left: 1068px;
+} */
+.cajaAbierta a {
+  height: 28vh;
+  width: 16%;
+  top: 14vh;
+  left: 55.6%;
 }
+
 
 .escape button[type="submit"] {
   background-color: var(--color1);
@@ -169,8 +191,8 @@ section a{
   border: 3px solid var(--color2);
 }
 
-.termica div button{
-  /* border: 5px solid white; */
+/* .termica div button{
+  border: 5px solid white;
   background: none;
   border: none;
   height: 50px;
@@ -178,6 +200,7 @@ section a{
   margin-left: 15%;
   margin-bottom: 10%;
 }
+
 .termica div{
   width: 300px;
   position: fixed;
@@ -190,9 +213,37 @@ section a{
   top: 305px;
   left: 1147px;
   font-size: x-large;
+} */
+
+.termica div button {
+  background: none;
+  border: none;
+  /* border: 1px solid white; */
+  height: 5vh;
+  width: 30%;
+  margin-left: 15%;
+  margin-block: 1.8vh;
 }
 
-.termica h5{
+.termica div {
+  height: 26vh;
+  /* border: 1px solid white; */
+  position: fixed;
+  width: 17%;
+  top: 23vh;
+  left: 32.81%;
+}
+
+.termica ul {
+  position: fixed;
+  top: 28.24vh;
+  left: 59.74%;
+  font-size: x-large;
+}
+
+
+
+/* .termica h5{
   position: fixed;
   top: 550px;
   left: 775px;
@@ -202,4 +253,22 @@ section a{
   position: fixed;
   top: 650px;
   left: 665px;
+} */
+
+.termica h5 {
+  top: 50.93vh;
+  left: 39%;
+  font-size: x-large;
+  position: fixed;
+  padding: 1%;
+  padding-block: 0.5%;
+  background-color:black;
+  color: green;
+  border-radius: 5px;
+}
+
+.termica h4 {
+  top: 60.19vh;
+  left: 34.90%;
+  position: fixed;
 }

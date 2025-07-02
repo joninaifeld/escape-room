@@ -12,7 +12,7 @@ public class Coto{
             new Sala("index.webp", "Estás en un Coto!!1!!!1!", "Parece que la idea de quedarse 24hs en el Coto no salió del todo bien", "Index", "next"),
             new Sala("almacenamiento.png", "Sala de Almacenamiento", "No te compliques", "Almacenamiento", "35"),
             new Sala("mantenimiento.png", "Sala de Mantenimiento", "Si funciona, no lo toques", "Mantenimiento", "next"),
-            new Sala("termica.png", "Caja de Térmica", "laFotoDeJaz.jpg", "Termica", "claves"),
+            new Sala("termica.png", "Caja de Térmica", "¿Es ese es el orden correcto?", "Termica", "claves"),
             new Sala("heladeras.jpg", "Área de Heladeras", "Mantené la mente fría", "Heladeras","next"),
             new Sala("heladeras-fechas.jpg", "Área de Heladeras", "Mantené la mente fría", "HeladerasFecha","24/11"),
             new Sala("verduleria.jpg", "Verdulería", "Banana", "Verduleria", "next"),
